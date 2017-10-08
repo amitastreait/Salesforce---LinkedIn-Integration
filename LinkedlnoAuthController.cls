@@ -5,9 +5,9 @@ public class LinkedlnoAuthController{
     public List<LinkedIn_Token_Info__c> linkedlnInfoList { get; set; }
     public String BasicInfo { get; set; }
     
-    public Final String consumerKey = 'XXXXXXXX'; // Your Client Id here
-    public Final String consumerSecret ='XXXXXXXX'; // // Your Client Secret here
-    public Final String redirect_URI = 'https://dreamhouse-a-dev-ed--c.ap5.visual.force.com/apex/LinkedlnoAuth'; // Your VF page preview URL Here
+    public Final String consumerKey = 'XXXXXXXXXXXXXX'; // Your Client Id here
+    public Final String consumerSecret ='XXXXXXXXXXXXXX';// Your Client Secret here
+    public Final String redirect_URI = 'https://dreamhouse-a-dev-ed--c.ap5.visual.force.com/apex/LinkedlnoAuth'; // VF page preview URL
     public String linkedln_Scope = 'r_fullprofile%20r_emailaddress';
     public Final String linkedln_AuthUrl = 'https://www.linkedin.com/oauth/v2/authorization?';
     public Final String accessToken_Endpoint = 'https://www.linkedin.com/oauth/v2/accessToken';
@@ -93,9 +93,11 @@ public class LinkedlnoAuthController{
         HttpRequest httpReq = new HttpRequest();
         HttpResponse httpRes = new HttpResponse();
         
+        List<LinkedIn_Token_Info__c> linkedlnInfoListNew = LinkedIn_Token_Info__c.getAll().values();
+        
         httpReq.SetMethod('GET');
         httpReq.setEndpoint('https://api.linkedin.com/v1/people/~?format=json');
-        httpReq.setHeader('Authorization', 'Bearer '+linkedlnInfoList[0].Access_Token__c);
+        httpReq.setHeader('Authorization', 'Bearer '+linkedlnInfoListNew[0].Access_Token__c);
         httpReq.setHeader('Content-Type', 'application/json');
         
         try{
