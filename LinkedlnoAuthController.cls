@@ -68,7 +68,7 @@ public class LinkedlnoAuthController{
                 upsert linkedlnInfo;
                 
             }else{
-                errorMessage = 'Unexpected Error while communicating with Google Calendar API. '
+                errorMessage = 'Unexpected Error while communicating with LinkedIn API. '
                                     +'Status '+httpRes.getStatus()+' and Status Code '+httpRes.getStatuscode();
                 ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR, errorMessage));
             }
@@ -79,7 +79,7 @@ public class LinkedlnoAuthController{
                                     +' Remote Site Setting and add '+' '+ accessToken_Endpoint +' Endpoint';
                 ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR, errorMessage));
             }else{
-                errorMessage = 'Unexpected Error while communicating with Google Calendar API. '
+                errorMessage = 'Unexpected Error while communicating with LinkedIn API. '
                                     +'Status '+httpRes.getStatus()+' and Status Code '+httpRes.getStatuscode();
                 ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR, errorMessage));
             }
@@ -111,7 +111,7 @@ public class LinkedlnoAuthController{
                 BasicInfo = firstName +'  ' + lastName +'  '+headline;
                 
             }else{
-                errorMessage = 'Unexpected Error while communicating with Google Calendar API. '
+                errorMessage = 'Unexpected Error while communicating with LinkedIn API. '
                                     +'Status '+httpRes.getStatus()+' and Status Code '+httpRes.getStatuscode();
                 ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR, errorMessage));
             }
@@ -122,7 +122,7 @@ public class LinkedlnoAuthController{
                                     +' Remote Site Setting and add '+' '+ 'https://api.linkedin.com/ '+' Endpoint';
                 ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR, errorMessage));
             }else{
-                errorMessage = 'Unexpected Error while communicating with Google Calendar API. '
+                errorMessage = 'Unexpected Error while communicating with LinkedIn API. '
                                     +'Status '+httpRes.getStatus()+' and Status Code '+httpRes.getStatuscode();
                 ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR, errorMessage));
             }
