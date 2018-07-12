@@ -27,9 +27,18 @@
           <apex:pageBlockButtons location="bottom">
               <apex:commandButton value="Get Basic Info" action="{!doFetchBasicInfo}"
                   status="statusLinkdln" rerender="theForm, thePanel" />
+              <apex:commandButton value="Share Post on LinkedIn" action="{!doSharePostOnLinkedIn}"
+                  status="statusLinkdln" rerender="theForm, thePanel, sharedPanel" />
           </apex:pageBlockButtons>
           <apex:outputPanel id="thePanel">
-              {!BasicInfo}
+              {!BasicInfo} <br/>
+              {!sharedInformation}
+          </apex:outputPanel>
+          <apex:outputPanel id="sharedPanel" rendered="{!urlToSharedPost != null && urlToSharedPost <> ''}">
+              <br/>
+              <br/>
+              
+              Click <apex:outputLink value="{!urlToSharedPost}" target="_blank" > Here </apex:outputLink> to view the shared post!!>
           </apex:outputPanel>
       </apex:pageBlock>
   </apex:form>
