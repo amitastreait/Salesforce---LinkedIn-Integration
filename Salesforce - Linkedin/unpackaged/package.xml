@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>LinkedlnoAuthController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>LinkedlnoAuth</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>LinkedIn_Information__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>LinkedlnURL</members>
+        <members>linkedinAPI</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <version>41.0</version>
+</Package>
